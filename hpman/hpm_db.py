@@ -158,7 +158,7 @@ class HyperParamNode:
             if not item.priority == P.PRIORITY_PARSED_FROM_SOURCE_CODE:
                 continue
 
-            if item.has_default_value:
+            if item.has_default_value and item.value != occ.value:
                 error_msg = (
                     "Duplicated default values:\n"
                     "First occurrence:\n"
